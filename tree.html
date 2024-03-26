@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .tree {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .tree-item {
+      cursor: pointer;
+    }
+
+    .tree-item:hover {
+      background-color: #f0f0f0;
+    }
+
+    .selected {
+      background-color: #c0c0c0;
+    }
+
+    .nested {
+      display: none;
+    }
+
+    .nested.show {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<ul class="tree">
+  <li class="tree-item" onclick="toggleNested(this)">
+    <span>トップ</span>
+    <ul class="nested">
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="top.html" target="main">トップ</a></li>
+    </ul>
+  </li>
+
+  <li class="tree-item" onclick="toggleNested(this)">
+    <span>Unity班に入ったらまず見てほしいところ</span>
+    <ul class="nested">
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="dev/00.html" target="main">Unity班初心者向け</a></li>
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="dev/01.html" target="main">機材等の質問</a></li>
+    </ul>
+  </li>
+
+  <li class="tree-item" onclick="toggleNested(this)">
+    <span>Unityのセットアップ</span>
+    <ul class="nested">
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="setup/00.html" target="main">Unityのセットアップ手順書</a></li>
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="setup/01.html" target="main">UnityHubのセットアップ</a></li>
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="setup/02.html" target="main">Unityセットアップ</a></li>
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="setup/03.html" target="main">Visual&nbsp;zStudioのセットアップ</a></li>
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="setup/04.html" target="main">Git・GitHubのセットアップ</a></li>
+    </ul>
+  </li>
+  <li class="tree-item" onclick="toggleNested(this)">
+    <span>デモプロジェクトの作成</span>
+    <ul class="nested">
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="demo/00.html" target="main">初心者向けデモ</a></li>
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="demo/01.html" target="main">プロジェクトファイルの作成</a></li>
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="demo/02.html" target="main">プロジェクト編集</a></li>
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="demo/03.html" target="main">Gitで保存</a></li>
+    </ul>
+  </li>
+  <li class="tree-item" onclick="toggleNested(this)">
+    <span>躓いたときは</span>
+    <ul class="nested">
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="tumazuki/00.html" target="main">chatGPT</a></li>
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="tumazuki/01.html" target="main">頼れる先輩方</a></li>
+      <li class="tree-item" onclick="event.stopPropagation()"><a href="" target="main">エラーの原因を知ろう</a></li>
+    </ul>
+</ul>
+
+<script>
+  function toggleNested(item) {
+    const nestedList = item.querySelector('.nested');
+    nestedList.classList.toggle('show');
+
+    const treeItems = document.querySelectorAll('.tree-item');
+    treeItems.forEach(treeItem => treeItem.classList.remove('selected'));
+    item.classList.add('selected');
+  }
+</script>
+
+</body>
+</html>
