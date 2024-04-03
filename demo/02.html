@@ -22,7 +22,7 @@
         なので壁を作って当たり判定をつけて跳ね返るようにしなくてはなりません。</p>
         <h4>2-1.2Dオブジェクトを作る</h4>
             <p>ヒエラルキーを右クリックして、2Dオブジェクトから、四角形を選びます。名前はわかりやすいようにwallとかにしましょう。<br>
-                <img src="pic/2.jpg" alt="UnityHubIns">
+                <img src="pic/9.png" alt="UnityHubIns">
             四角形の形を調整し、いい感じにカメラの端のほうに配置しましょう。<br>
         ゲームタブで見るとどのようになっているかわかりやすいです。<br><br></p>
         <h4>当たり判定を付ける</h4>
@@ -32,38 +32,38 @@
             それの一番下にコンポーネントを追加というのがあるので、それを押しましょう。<br>
             上のほうに「Physics2D」があるので、これを選択。<br>
             上から2番目の「BoxCollider2D」を選択しましょう。<br>
-            <img src="pic/2.jpg" alt="UnityHubIns">
+            <img src="pic/10.png" alt="UnityHubIns">
             こんなのが出てきたら、当たり判定の実装が完成です。<br>
             壁をコピペしていい感じに囲ってあげましょう。
-            <img src="pic/2.jpg" alt="UnityHubIns">
+            <img src="pic/11.png" alt="UnityHubIns">
             </p>
     <h3>3.プレイヤーを生み出す</h3>
         <h4>3-1 オブジェクト生成</h4>
             <p>いよいよプレイヤーを作っていきます。急にゲームらしくなりますね。<br>
             まず、さっき壁を生やしたときのように四角形を生成します。名前はPlayerとかにしておきましょう。<br>当たり判定もつけたいので、ここもさっきと同じようにBoxCollider2Dをつけましょう。</p>
-            <img src="pic/2.jpg" alt="UnityHubIns">
+            <img src="pic/12.png" alt="UnityHubIns">
         <h4>3-2 スクリプトの作成</h4>
             <p>続いてはプレイヤーを動かすスクリプトを作っていきましょう。みんな大好きプログラミングのお時間です。<br>
             画面下のアセットを右クリックし、作成を選択します。そこからさらにC#スクリプトを選びます。<br>
-            <img src="pic/2.jpg" alt="UnityHubIns">
+            <img src="pic/13.png" alt="UnityHubIns">
             名前はPlayerControllerとかわかりやすくしておきましょう。<br>
             できたら作ったやつをダブルクリックします。VisualStudioが開けばOKです。<br><br></p>
             <p>ひとまずこのように入力してください。それぞれの意味はこの後解説します。</p>
-            <img src="pic/2.jpg" alt="UnityHubIns">
+            <img src="pic/17.png" alt="UnityHubIns">
     <!-- ここにプログラム全体の画像を挿入　マジで絶対-->
     <!--UnityEngineあたりの画像-->
-    <img src="pic/2.jpg" alt="UnityHubIns">
+    <img src="pic/17.1.png" alt="UnityHubIns">
             <p>ここはUnityでコード書くぜ!ってやつです。これからUnityでコード書くときはこれがあるか確認しましょう。(自動で書かれるから多分だいじょうぶ)<br>
     <!--変数の画像--> 
-    <img src="pic/2.jpg" alt="UnityHubIns">  
+    <img src="pic/17.2.png" alt="UnityHubIns">  
             ここは変数です。この変数はスピードを管理してます。publicってつけてると、Unity側でこの数値をいじくれるので便利です。(後述)<br>
     <!--voidstartのあたりの画像-->
-    <img src="pic/2.jpg" alt="UnityHubIns">
+    <img src="pic/17.3.png" alt="UnityHubIns">
             void startはゲームが始まったときに一回だけ実行する！ってやつです。最初の変数の設定なんかはここで設定したりします。<br>
             void updateゲーム中ずっと繰り返し実行するぜ！ってやつです。ゲームの操作なんかはここに書きましょう。<br>
 
             
-    <!--操作部分の画像--><img src="pic/2.jpg" alt="UnityHubIns">
+    <!--操作部分の画像--><img src="pic/17.4.png" alt="UnityHubIns">
             ここは矢印キーの左右で移動できるようにするプログラムです。
              </p>
         <h4>3-3 スクリプトのアタッチ</h4>
